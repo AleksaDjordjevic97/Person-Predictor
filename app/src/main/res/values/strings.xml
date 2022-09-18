@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Person Predictor</string>
+    
+    <string name="predict_btn_home_text">PREDICT</string>
 </resources>
