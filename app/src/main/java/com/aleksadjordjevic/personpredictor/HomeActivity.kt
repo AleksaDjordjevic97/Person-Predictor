@@ -1,5 +1,6 @@
 package com.aleksadjordjevic.personpredictor
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.LinearInterpolator
@@ -15,6 +16,17 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupAnimations()
+        setOnClickListeners()
+    }
+
+    private fun setOnClickListeners() {
+        binding.btnPredictHome.setOnClickListener { goToNameActivity() }
+    }
+
+    private fun goToNameActivity() {
+        val nameActivityIntent = Intent(this,NameActivity::class.java)
+        startActivity(nameActivityIntent)
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
     }
 
     private fun setupAnimations()

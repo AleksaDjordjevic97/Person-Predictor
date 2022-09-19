@@ -3,4 +3,10 @@
 
     <dimen name="predict_btn_home_text_size">50sp</dimen>
 
+    <dimen name="activity_name_textview_size">70sp</dimen>
+    <dimen name="activity_name_edittext_size">60sp</dimen>
+    <dimen name="activity_name_edittext_margin_top">35dp</dimen>
+    <dimen name="activity_name_edittext_arrow_btn">75dp</dimen>
+    <dimen name="activity_name_edittext_arrow_btn_margin_bottom">10dp</dimen>
+
 </resources>

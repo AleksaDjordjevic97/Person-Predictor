@@ -3,4 +3,9 @@
     <color name="predict_btn_home_text">#ffffff</color>
     <color name="predict_btn_home_not_pressed">#b2224f</color>
     <color name="predict_btn_home_pressed">#6a142f</color>
+
+    <color name="activity_name_textview">#000000</color>
+    <color name="activity_name_edittext">#b2224f</color>
+    <color name="activity_name_edittext_line">#000000</color>
+
 </resources>

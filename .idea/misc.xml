@@ -7,6 +7,8 @@
         <entry key="app/src/main/res/drawable/predict_btn_home_not_pressed.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/predict_btn_home_pressed.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_name.xml" value="0.2814814814814815" />
+        <entry key="app/src/main/res/layout/activity_predictions.xml" value="0.28072916666666664" />
       </map>
     </option>
   </component>
