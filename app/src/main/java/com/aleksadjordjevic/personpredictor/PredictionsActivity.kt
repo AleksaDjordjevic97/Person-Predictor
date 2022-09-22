@@ -5,11 +5,12 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.aleksadjordjevic.personpredictor.databinding.ActivityPredictionsBinding
 import com.aleksadjordjevic.personpredictor.network.Country
+import com.aleksadjordjevic.personpredictor.view_models.PredictionsViewModel
 
 class PredictionsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPredictionsBinding
-    private val predictionsViewModel:PredictionsViewModel by lazy {
+    private val predictionsViewModel: PredictionsViewModel by lazy {
         ViewModelProvider(this).get(PredictionsViewModel::class.java)
     }
 
@@ -26,6 +27,10 @@ class PredictionsActivity : AppCompatActivity() {
     {
         predictionsViewModel.nationalitiesLiveData.observe(this){state->
             processNationalityResponse(state)
+        }
+
+        predictionsViewModel.genderLiveData.observe(this){state->
+            processGenderResponse(state)
         }
     }
 
@@ -47,10 +52,29 @@ class PredictionsActivity : AppCompatActivity() {
         }
     }
 
+    private fun processGenderResponse(state: ScreenState<Float>?) {
+        when(state){
+            is ScreenState.Loading->{
+
+            }
+            is ScreenState.Success->{
+                if(state.data != null)
+                {
+
+                }
+            }
+            is ScreenState.Error->{
+
+            }
+            else -> {}
+        }
+    }
+
     private fun getAllPredictions()
     {
         val name = intent.getStringExtra("USER_NAME") ?: ""
         predictionsViewModel.fetchNationalities(name)
+        predictionsViewModel.fetchGenderPrediction(name)
     }
 
 
