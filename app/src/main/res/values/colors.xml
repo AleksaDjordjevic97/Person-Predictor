@@ -8,4 +8,9 @@
     <color name="activity_name_edittext">#b2224f</color>
     <color name="activity_name_edittext_line">#000000</color>
 
+    <color name="activity_prediction_user_name">#b2224f</color>
+    <color name="activity_prediction_under_user_name">#000000</color>
+    <color name="activity_prediction_gender_male_percent">#2785bd</color>
+    <color name="activity_prediction_gender_female_percent">#d84178</color>
+
 </resources>

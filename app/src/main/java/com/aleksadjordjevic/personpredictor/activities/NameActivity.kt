@@ -1,4 +1,4 @@
-package com.aleksadjordjevic.personpredictor
+package com.aleksadjordjevic.personpredictor.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.aleksadjordjevic.personpredictor.R
 import com.aleksadjordjevic.personpredictor.databinding.ActivityNameBinding
 
 class NameActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class NameActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         finish()
-        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
     private fun setTextListener() {
@@ -52,11 +53,11 @@ class NameActivity : AppCompatActivity() {
     }
 
     private fun goToPredictionsActivity() {
-        val predictionsActivityIntent = Intent(this,PredictionsActivity::class.java)
-        val userName = binding.activityNameEditText.text.trim()
+        val predictionsActivityIntent = Intent(this, PredictionsActivity::class.java)
+        val userName = binding.activityNameEditText.text.trim().toString()
         predictionsActivityIntent.putExtra("USER_NAME", userName)
         startActivity(predictionsActivityIntent)
-        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
     }
 
 

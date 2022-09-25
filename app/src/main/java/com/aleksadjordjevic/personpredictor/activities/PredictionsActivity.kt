@@ -1,12 +1,19 @@
-package com.aleksadjordjevic.personpredictor
+package com.aleksadjordjevic.personpredictor.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import com.aleksadjordjevic.personpredictor.network.ScreenState
 import com.aleksadjordjevic.personpredictor.databinding.ActivityPredictionsBinding
 import com.aleksadjordjevic.personpredictor.network.Country
 import com.aleksadjordjevic.personpredictor.view_models.PredictionsViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class PredictionsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPredictionsBinding
@@ -19,8 +26,15 @@ class PredictionsActivity : AppCompatActivity() {
         binding = ActivityPredictionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupUserName()
         setupPredictionsObserver()
         getAllPredictions()
+    }
+
+    private fun setupUserName() {
+
+        val userName = intent.getStringExtra("USER_NAME") ?: ""
+        binding.txtUserName.text = userName
     }
 
     private fun setupPredictionsObserver()
@@ -36,16 +50,16 @@ class PredictionsActivity : AppCompatActivity() {
 
     private fun processNationalityResponse(state: ScreenState<List<Country>?>?) {
         when(state){
-            is ScreenState.Loading->{
+            is ScreenState.Loading ->{
 
             }
-            is ScreenState.Success->{
+            is ScreenState.Success ->{
                 if(state.data != null)
                 {
 
                 }
             }
-            is ScreenState.Error->{
+            is ScreenState.Error ->{
 
             }
             else -> {}
@@ -54,16 +68,16 @@ class PredictionsActivity : AppCompatActivity() {
 
     private fun processGenderResponse(state: ScreenState<Float>?) {
         when(state){
-            is ScreenState.Loading->{
+            is ScreenState.Loading ->{
 
             }
-            is ScreenState.Success->{
+            is ScreenState.Success ->{
                 if(state.data != null)
                 {
 
                 }
             }
-            is ScreenState.Error->{
+            is ScreenState.Error ->{
 
             }
             else -> {}

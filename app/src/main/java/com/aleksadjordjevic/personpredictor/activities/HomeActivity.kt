@@ -1,9 +1,10 @@
-package com.aleksadjordjevic.personpredictor
+package com.aleksadjordjevic.personpredictor.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.LinearInterpolator
+import com.aleksadjordjevic.personpredictor.R
 import com.aleksadjordjevic.personpredictor.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -24,9 +25,9 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun goToNameActivity() {
-        val nameActivityIntent = Intent(this,NameActivity::class.java)
+        val nameActivityIntent = Intent(this, NameActivity::class.java)
         startActivity(nameActivityIntent)
-        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
     }
 
     private fun setupAnimations()

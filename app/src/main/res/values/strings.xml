@@ -3,4 +3,6 @@
 
     <string name="predict_btn_home_text">PREDICT</string>
     <string name="name_activity_text">Hi! What is your name?</string>
+
+    <string name="activity_prediction_underuser_name_text">We predict that you are...</string>
 </resources>

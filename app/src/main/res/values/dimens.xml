@@ -9,5 +9,9 @@
     <dimen name="activity_name_edittext_arrow_btn">50dp</dimen>
     <dimen name="activity_name_edittext_arrow_btn_margin_bottom">5dp</dimen>
 
+    <dimen name="activity_prediction_user_name_text_size">60sp</dimen>
+    <dimen name="activity_prediction_under_user_name_text_size">30sp</dimen>
+    <dimen name="activity_prediction_gender_percent_text_size">30sp</dimen>
+
 
 </resources>

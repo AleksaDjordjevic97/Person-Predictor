@@ -4,15 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PredictionsActivity">
+    tools:context=".activities.PredictionsActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/guidelineUserNameTop"
+        android:fontFamily="@font/berlin_sans_fb_bold"
+        android:textAlignment="center"
+        android:textColor="@color/activity_prediction_user_name"
+        android:textSize="@dimen/activity_prediction_user_name_text_size"
+        android:text="Aleksa"/>
+
+    <TextView
+        android:id="@+id/txtUnderUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/berlin_sans_fb_bold"
+        android:textAlignment="center"
+        android:textColor="@color/activity_prediction_under_user_name"
+        android:textSize="@dimen/activity_prediction_under_user_name_text_size"
+        android:text="@string/activity_prediction_underuser_name_text"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toBottomOf="@+id/txtUnderUserName">
+
+        <ImageView
+            android:id="@+id/imgGenderMale"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/gender_male"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/txtGenderMalePercent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtGenderMalePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgGenderFemale"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgGenderMale"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/activity_prediction_gender_male_percent"
+            android:textSize="@dimen/activity_prediction_gender_percent_text_size"
+            android:fontFamily="@font/berlin_sans_fb_bold"/>
+
+        <ImageView
+            android:id="@+id/imgGenderFemale"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/gender_female"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/txtGenderFemalePercent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtGenderMalePercent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtGenderFemalePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgGenderFemale"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/activity_prediction_gender_female_percent"
+            android:textSize="@dimen/activity_prediction_gender_percent_text_size"
+            android:fontFamily="@font/berlin_sans_fb_bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineUserNameTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

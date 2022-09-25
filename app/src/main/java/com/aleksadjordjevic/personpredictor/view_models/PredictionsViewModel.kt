@@ -4,20 +4,26 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.aleksadjordjevic.personpredictor.ScreenState
+import com.aleksadjordjevic.personpredictor.network.ScreenState
 import com.aleksadjordjevic.personpredictor.network.NationalityApiClient
 import com.aleksadjordjevic.personpredictor.network.Country
 import com.aleksadjordjevic.personpredictor.network.GenderApiClient
 import com.aleksadjordjevic.personpredictor.repositories.GenderRepository
 import com.aleksadjordjevic.personpredictor.repositories.NationalityRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.lang.Exception
+import javax.inject.Inject
 
-class PredictionsViewModel(
-    private val nationalityRepository: NationalityRepository = NationalityRepository(NationalityApiClient.apiService),
-    private val genderRepository: GenderRepository = GenderRepository(GenderApiClient.apiService),
+@HiltViewModel
+class PredictionsViewModel @Inject constructor(
+    val nationalityRepository: NationalityRepository,
+    val genderRepository: GenderRepository
 ):ViewModel() {
+
+   // private val nationalityRepository: NationalityRepository = NationalityRepository(NationalityApiClient.apiService),
+   // private val genderRepository: GenderRepository = GenderRepository(GenderApiClient.apiService)
 
     private var _nationalitiesLiveData = MutableLiveData<ScreenState<List<Country>?>>()
     val nationalitiesLiveData:LiveData<ScreenState<List<Country>?>>
@@ -41,6 +47,8 @@ class PredictionsViewModel(
             }
         }
     }
+
+    fun getCountryByID(countryID:String) = nationalityRepository.getCountryFromID(countryID)
 
     fun fetchGenderPrediction(name: String)
     {
