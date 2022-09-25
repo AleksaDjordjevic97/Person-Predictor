@@ -6,5 +6,5 @@ import retrofit2.http.Query
 interface GenderApiService {
 
     @GET(".")
-    suspend fun getGenderPrediction(@Query("name") name: String):Float
+    suspend fun getGenderPrediction(@Query("name") name: String):Gender
 }

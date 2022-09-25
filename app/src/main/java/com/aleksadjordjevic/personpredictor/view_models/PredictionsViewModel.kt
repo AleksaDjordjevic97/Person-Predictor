@@ -4,10 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.aleksadjordjevic.personpredictor.network.ScreenState
-import com.aleksadjordjevic.personpredictor.network.NationalityApiClient
-import com.aleksadjordjevic.personpredictor.network.Country
-import com.aleksadjordjevic.personpredictor.network.GenderApiClient
+import com.aleksadjordjevic.personpredictor.network.*
 import com.aleksadjordjevic.personpredictor.repositories.GenderRepository
 import com.aleksadjordjevic.personpredictor.repositories.NationalityRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,8 +26,8 @@ class PredictionsViewModel @Inject constructor(
     val nationalitiesLiveData:LiveData<ScreenState<List<Country>?>>
         get() = _nationalitiesLiveData
 
-    private var _genderLiveData = MutableLiveData<ScreenState<Float>?>()
-    val genderLiveData:LiveData<ScreenState<Float>?>
+    private var _genderLiveData = MutableLiveData<ScreenState<Gender>?>()
+    val genderLiveData:LiveData<ScreenState<Gender>?>
         get() = _genderLiveData
 
 
