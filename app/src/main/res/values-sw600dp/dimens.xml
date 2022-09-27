@@ -12,5 +12,8 @@
     <dimen name="activity_prediction_user_name_text_size">90sp</dimen>
     <dimen name="activity_prediction_under_user_name_text_size">60sp</dimen>
     <dimen name="activity_prediction_gender_percent_text_size">60sp</dimen>
+    <dimen name="activity_prediction_under_gender_text_size">60sp</dimen>
+    <dimen name="activity_prediction_country_list_name_text_size">60sp</dimen>
+    <dimen name="activity_prediction_country_list_percent_text_size">60sp</dimen>
 
 </resources>

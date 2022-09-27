@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/country_list_background.xml" value="0.125" />
         <entry key="app/src/main/res/drawable/predict_btn_home.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/predict_btn_home_not_pressed.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/predict_btn_home_pressed.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw600dp/view_holder_nationality.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_name.xml" value="0.2814814814814815" />
-        <entry key="app/src/main/res/layout/activity_predictions.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_predictions.xml" value="0.25116082735331363" />
+        <entry key="app/src/main/res/layout/view_holder_nationality.xml" value="0.25116082735331363" />
       </map>
     </option>
   </component>
