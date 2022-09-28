@@ -10,8 +10,8 @@
 
     <color name="activity_prediction_user_name">#b2224f</color>
     <color name="activity_prediction_under_user_name">#000000</color>
-    <color name="activity_prediction_gender_male_percent">#2785bd</color>
-    <color name="activity_prediction_gender_female_percent">#d84178</color>
+    <color name="activity_prediction_gender_male_percent">#224370</color>
+    <color name="activity_prediction_gender_female_percent">#ff5f96</color>
     <color name="activity_prediction_under_gender">#000000</color>
     <color name="activity_prediction_country_list_name">#000000</color>
     <color name="activity_prediction_country_list_percent">#b2224f</color>
