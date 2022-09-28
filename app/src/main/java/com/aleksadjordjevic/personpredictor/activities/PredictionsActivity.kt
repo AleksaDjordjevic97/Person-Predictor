@@ -117,8 +117,10 @@ class PredictionsActivity : AppCompatActivity() {
         val countryNameMap = HashMap<String,String>()
 
         for(country in countryList) {
-            val countryName = predictionsViewModel.getCountryByID(country.country_id).country_name
-            countryNameMap[country.country_id] = countryName
+            val countryName = predictionsViewModel.getCountryByID(country.country_id)?.country_name
+            countryName?.let {
+                countryNameMap[country.country_id] = it
+            }
         }
 
         return countryNameMap

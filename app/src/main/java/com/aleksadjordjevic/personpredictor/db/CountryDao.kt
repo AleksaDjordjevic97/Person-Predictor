@@ -8,5 +8,5 @@ import com.aleksadjordjevic.personpredictor.db.entities.Country
 interface CountryDao {
 
     @Query("SELECT * FROM countries WHERE country_id LIKE :countryId LIMIT 1")
-    fun getCountryFromID(countryId:String): Country
+    fun getCountryFromID(countryId:String): Country?
 }
